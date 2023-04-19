@@ -1,0 +1,95 @@
+GET http://localhost:5000/departments/directions HTTP/1.1
+
+###
+
+POST http://localhost:5000/centers HTTP/1.1
+Content-Type: application/json
+
+{
+   "name" :"Najot Ta'lim",
+   "address" : "Tashkent"
+}
+
+###
+POST http://localhost:5000/departments HTTP/1.1
+Content-Type: application/json
+
+{
+    "center_ref_id" : "643cf8b4dfba8645b28a2a8f",
+    "dep_name" :"Oquv bo'limi"
+}
+
+###
+POST http://localhost:5000/departments/positions HTTP/1.1
+Content-Type: application/json
+
+{
+    "dep_ref_id" : "643cf8d4dfba8645b28a2a93",
+    "pos_name" :"Admin",
+    "salary" : 5000
+}
+
+####
+
+POST http://localhost:5000/departments/directions HTTP/1.1
+Content-Type: application/json
+
+{
+    "dep_ref_id" : "643cf8c0dfba8645b28a2a91",
+   "der_name" :"Bugalteriya",
+   "duration" : 12,
+   "salary": 2500
+}
+
+####
+
+POST http://localhost:5000/groups HTTP/1.1
+Content-Type: application/json
+
+{
+    "dir_ref_id" : "643cf921dfba8645b28a2aa1",
+   "gr_number" :29
+}
+
+
+####
+
+POST http://localhost:5000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "pos_ref_id" : "643d391aa174c72d7b83644c",
+   "first_name" :"Adminka",
+   "last_name" :"Qodirovjon",
+    "gender" : "male",
+    "contact" : "+998937322405",
+    "email" : "qobiljonovmuxamadamin@gmail.com"
+}
+
+
+
+####
+
+POST http://localhost:5000/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "pos_ref_id" : "643d391aa174c72d7b83644c",
+   "first_name" :"Adminka",
+   "last_name" :"Qodirovjon",
+    "gender" : "male",
+    "contact" : "+998937322405",
+    "email" : "qobiljonovmuxamadamin@gmail.com"
+}
+
+
+
+####
+
+POST http://localhost:5000/admin/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "contact" : "+998937322405",
+    "email" : "qobiljonovmuxamadamin@gmail.com"
+}
